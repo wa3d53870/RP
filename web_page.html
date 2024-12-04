@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Human Pose Estimation Using Event-Based Dynamic Vision Sensors for Enhanced Human-Machine Interaction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .video-container {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .video-container a {
+            display: block;
+            color: #007BFF;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+        .video-container a:hover {
+            text-decoration: underline;
+        }
+        .results-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .results-container h2 {
+            margin-top: 0;
+        }
+        .gif-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .gif-item {
+            text-align: center;
+            width: 30%; /* Adjust as needed */
+        }
+        .gif-item img {
+            width: 100%; /* Ensure GIFs scale within their containers */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .gif-item p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+    .center-heading {
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="center-heading">Human Pose Estimation Using Event-Based Dynamic Vision Sensors for Enhanced Human-Machine Interaction </h1>
+        <h2 class="center-heading">Waad Abuouelezz</h2>
+        <h2 class="center-heading">100053870</h2>
+    </header>
+    <div class="results-container">
+	<h2>Data Collection</h2>
+        <p> DVS cameras were used to capture six different human poses: left arm abduction, right arm abduction, left leg abduction, right leg abduction, left leg knee lift, and right leg knee lift. </p>
+    </div>
+    <div class="gif-container">
+        <div class="gif-item">
+            <img src="visualization_video_left_arm_abduction.gif" alt="left arm abduction">
+            <p>Left Arm Abduction</p>
+        </div>
+        <div class="gif-item">
+            <img src="visualization_video_right_arm_abduction.gif" alt="right arm abduction">
+            <p>Right Arm Abduction</p>
+        </div>
+        <div class="gif-item">
+            <img src="visualization_video_knee_left.gif" alt="left leg knee lift">
+            <p>Left Leg Knee Lift</p>
+        </div>
+    </div>
+	<div class="gif-container">
+        <div class="gif-item">
+            <img src="visualization_video_knee_right.gif" alt="right leg knee lift">
+            <p>Right Leg Knee Lift</p>
+        </div>
+        <div class="gif-item">
+            <img src="visualization_video_left_leg_abduction.gif" alt="left leg abduction">
+            <p>Left Leg Abduction</p>
+        </div>
+        <div class="gif-item">
+            <img src="visualization_video_right_leg_abduction.gif" alt="right leg abduction">
+            <p>Right Leg Abduction</p>
+        </div>
+    </div>
+
+	<div class="results-container">
+	<h2>Model Architectures</h2>
+        <p> Three models were used in pose classification:ResNet, MobileNet, and Custom CNN. The architecture of the three models are shown below: </p>
+    </div>
+	<div class="gif-container">
+        <div class="gif-item">
+            <img src="Resnet.png" alt="ResNet Model Architecture">
+            <p>ResNet Model Architecture</p>
+        </div>
+        <div class="gif-item">
+            <img src="Mobilenet.png" alt="MobileNet Model Architecture">
+            <p>MobileNet Model Architecture</p>
+        </div>
+        <div class="gif-item">
+            <img src="CNN.png" alt="CNN Model Architecture">
+            <p>CNN Model Architecture</p>
+        </div>
+    </div>
+	<div class="results-container">
+	<h2>Models Training</h2>
+        <p> Models were trained for 10 epochs using the Adam optimizer and CrossEntropy loss. The training process was monitored by plotting the loss 	against epochs for each model. All three plots show a huge fall in loss during the first epoch and then a gentle slope downwards, hence 	indicating convergence.</p>
+    </div>
+	<div class="gif-container">
+        <div class="gif-item">
+            <img src="Resnet_training.png" alt="ResNet Training">
+        </div>
+        <div class="gif-item">
+            <img src="Mobilenet_training.png" alt="MobileNet Training">
+            
+        </div>
+        <div class="gif-item">
+            <img src="CNN_training.png" alt="CNN Training">
+                    </div>
+    </div>
+	<div class="results-container">
+	<h2>Results</h2>
+        <p> The models achieved the below validation accuracies. The accuracies revealed that custom CNN performed the best. The predictions were 	visualized with actual and expected tags on sample frames. </p>
+    </div>
+	<div class="gif-container">
+        <div class="gif-item">
+            <img src="output_video_visualization_Resnet.gif" alt="output video visualization ResNet">
+		<p>Validation Accuracy=73.78%</p>
+        </div>
+        <div class="gif-item">
+		<img src="output_video_visualization_Mobilenet.gif" alt="output video visualization MobileNet">
+		<p>Validation Accuracy=95.67%</p>            
+        </div>
+        <div class="gif-item">
+		<img src="output_video_visualization_CNN.gif" alt="output video visualization CNN">
+		<p>Validation Accuracy=98.57%</p>                    
+</div>
+    </div>
+
+
+</body>
+</html>
